@@ -30,8 +30,6 @@ def main():
             texts =  'help打开帮助'
             texts += '\nabout打开关于'
             texts += '\ntimer close exes打开 \'定时关闭程序\''
-            texts += '\nmyself打开第二个主界面'
-            texts += '\nquitcmd cmd脱离程序'
             texts += '\n其他功能尽情期待'
             t = tk.Label(
                 helps,
@@ -47,7 +45,7 @@ def main():
                 except TypeError and ValueError:
                     pass
                 else:
-                    for i in tqdm(range(0,times)):
+                    for i in range(0,times):
                         module_time.sleep(1)
                     while os.system(f'taskkill /f /im {name.get()}') == 0:
                         pass
@@ -83,21 +81,6 @@ def main():
                 command = run_do_time)
             runbutton.pack()
             timer_ce.mainloop()
-        if cmd == 'quitcmd':
-            outputtext.set('Run to quitcmd.')
-            def quit():
-                os.system("taskkill /f /im taskkill.exe")
-            warningtext ='\n脱离的好处:'
-            warningtext+='\n- 几乎没有'
-            warningtext+='\n脱离的坏处:'
-            warningtext+='\n- \'定时关闭程序\'模块失效'
-            warningtext+='\n- (几率小)可能将某些东西搞异常'
-            warningtext+='\n如果执行脱离程序后cmd没有关闭，但是卡住了，就直接关闭cmd'
-            warningtext+='\n如果不生效，请执行多次(只在配置好的电脑上出现)'
-            warningtext+='\n如果出现"启动程序失败"纯属正常现象（暗示脱离成功）'
-            if messagebox.askokcancel("脱离程序",warningtext):
-                for i in range(100):
-                    _thread.start_new_thread(quit,())
         else:
             outputtext.set('Unknow command.\nplease input \'help\'to looking for commands.')
     
