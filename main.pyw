@@ -6,7 +6,7 @@
     log.write(f"{dt.datetime.now()} 导入模块tkinter\n")
     import tkinter as tk
     print(f"{dt.datetime.now()} 导入模块tkinter中的类messagebox")
-    log.write(f"{dt.datetime.now()} 导入模块tkinter中的类messagebox\n'")
+    log.write(f"{dt.datetime.now()} 导入模块tkinter中的类messagebox\n")
     import tkinter.messagebox as messagebox
     print(f"{dt.datetime.now()} 导入模块_thread")
     log.write(f"{dt.datetime.now()} 导入模块_thread\n")
@@ -43,41 +43,57 @@
             command.delete('0','end')# 清空输入框
             if cmd == 'about': # 如果用户输入了about
                 print(f"{dt.datetime.now()} 检测到用户输入about")
-                log.write(f"{dt.datetime.now()} 检测到用户输入about")
+                log.write(f"{dt.datetime.now()} 检测到用户输入about\n")
                 print(f"{dt.datetime.now()} 在输出框显示Run to about")
-                log.write(f"{dt.datetime.now()} 在输出框显示Run to about")
+                log.write(f"{dt.datetime.now()} 在输出框显示Run to about\n")
                 outputtext.set('Run to about')# 输入框显示Run to about
                 print(f"{dt.datetime.now()} 定义about窗口")
-                log.write(f"{dt.datetime.now()} 定义about窗口")
+                log.write(f"{dt.datetime.now()} 定义about窗口\n")
                 about = tk.Tk()# 定义about窗口
                 print(f"{dt.datetime.now()} 定义about窗口的标题")
-                log.write(f"{dt.datetime.now()} 定义about窗口的标题")
+                log.write(f"{dt.datetime.now()} 定义about窗口的标题\n")
                 about.title('关于 - 自动程序')# 定义about窗口的标题
                 # 定义Label文本框
                 print(f"{dt.datetime.now()} 定义Label文本显示框")
-                log.write(f"{dt.datetime.now()} 定义Label文本显示框")
+                log.write(f"{dt.datetime.now()} 定义Label文本显示框\n")
                 t = tk.Label(
                     about,
                     text = 'Made by AGS\nabout关于\nhelp查看更多指令')
                 print(f"{dt.datetime.now()} 显示文本框")
-                log.write(f"{dt.datetime.now()} 显示文本框")
+                log.write(f"{dt.datetime.now()} 显示文本框\n")
                 t.pack()
                 #显示窗口
                 print(f"{dt.datetime.now()} 显示窗口")
-                log.write(f"{dt.datetime.now()} 显示窗口")
+                log.write(f"{dt.datetime.now()} 显示窗口\n")
                 about.mainloop()
             if cmd == 'help':
+                print(f"{dt.datetime.now()} 检测到用户输入help")
+                log.write(f"{dt.datetime.now()} 检测到用户输入help\n")
+                print(f"{dt.datetime.now()} 在输出框显示Run to help")
+                log.write(f"{dt.datetime.now()} 在输出框显示Run to help\n")
                 outputtext.set('Run to help')
+                print(f"{dt.datetime.now()} 定义help窗口")
+                log.write(f"{dt.datetime.now()} 定义help窗口\n")
                 helps = tk.Tk()
+                print(f"{dt.datetime.now()} 定义help窗口的标题")
+                log.write(f"{dt.datetime.now()} 定义help窗口的标题\n")
                 helps.title('帮助 - 自动程序')
+                print(f"{dt.datetime.now()} 定义Label文本显示框文字")
+                log.write(f"{dt.datetime.now()} 定义Label文本显示框文字\n")
                 texts =  'help打开帮助'
                 texts += '\nabout打开关于'
                 texts += '\ntimer close exes打开 \'定时关闭程序\''
                 texts += '\n其他功能尽情期待'
+                print(f"{dt.datetime.now()} 定义Label文本显示框")
+                log.write(f"{dt.datetime.now()} 定义Label文本显示框\n")
                 t = tk.Label(
                     helps,
                     text = texts)
+                print(f"{dt.datetime.now()} 显示文本框")
+                log.write(f"{dt.datetime.now()} 显示文本框\n")
                 t.pack()
+                print(f"{dt.datetime.now()} 显示窗口")
+                log.write(f"{dt.datetime.now()} 显示窗口\n")
                 helps.mainloop()
             if cmd == 'timer close exes':
                 outputtext.set('Run to TIMER_CLOSE_EXES')
@@ -126,7 +142,7 @@
                 timer_ce.mainloop()
             else:
                 print(f"{dt.datetime.now()} 无效输入")
-                log.write(f"{dt.datetime.now()} 无效输入")
+                log.write(f"{dt.datetime.now()} 无效输入\n")
                 outputtext.set('Unknow command.\nplease input \'help\'to looking for commands.')
         
         def run_get_user_input():
